@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Másol</title>
+</head>
+<body>
+    <form action="">
+        <textarea id="elso" cols="30" rows="10">The Mega BBC</textarea>
+        <input type="button" value="Másol" onclick="masol()">
+        <textarea id="masodik" cols="30" rows="10"></textarea>
+        <input type="button" value="Töröl" onclick="torol()">
+    </form>
+    <script>
+        function masol(){
+            console.log("Másolás következik")
+            //kiolvasás
+            let szoveg=document.getElementById("elso").value
+            console.log(szoveg)
+            //felülírás
+            document.getElementById("masodik").value=szoveg
+        }
+        function torol(){
+            document.getElementById("masodik").value=""
+        }
+    </script>
+</body>
+</html>

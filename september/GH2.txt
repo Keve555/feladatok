@@ -1,0 +1,7 @@
+echo "# matek" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Keve555/matek.git
+git push -u origin main

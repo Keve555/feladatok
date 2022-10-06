@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szamolas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        h1{
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 30px 30px 30px;
+        }
+        input{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1>Jó vagy fejszámolásban?</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <input type="button" value="Új számokat kérek!" id="usk" onclick="">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2 szam1"></div>
+        <div class="col-md-2">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="col-md-2 szam2"></div>
+        <div class="col-md-2">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="col-md-4">
+            <input type="textfield" id="tf" onclick="osszead">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+           
+        </div>
+    </div>
+</div>
+<script>
+    function osszead(szam1,szam2){
+        return szam1+szam2;
+    }
+    
+    let szam1=Math.floor(Math.random()*100);
+    document.querySelector(".szam1").innerHTML=szam1;
+
+    let szam2=Math.floor(Math.random()*100);
+    document.querySelector(".szam2").innerHTML=szam2;
+
+    if(szam1+szam2==tf){
+
+    }
+</script>
+</body>
+</html>

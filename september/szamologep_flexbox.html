@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .conatiner{
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        border: 1px black solid;
+    }
+    .break{
+        width: 100%;
+    }
+    .box{
+        height: 4ram;
+        border: 1px black solid;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        background-color: gray;
+    }
+    .resultbox{
+        height: 4rem;
+        font-size: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 5px;
+        background-color: greenyellow;
+    }
+</style>
+
+    <div class="conatiner">
+        <div class="resultbox">0</div>
+        <div class="break"></div>
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box op">+</div>
+
+        <div class="break"></div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box op">-</div>
+
+        <div class="break"></div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box eq">9</div>
+        <div class="box op">*</div>
+
+        <div class="break"></div>
+        <div class="box">C</div>
+        <div class="box">0</div>
+        <div class="box eq">=</div>
+        <div class="box op">:</div>
+    </div>
+</body>
+</html>

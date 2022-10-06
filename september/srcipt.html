@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script</title>
+</head>
+<body>
+    <ul id="lista">
+        
+    </ul>
+    <Script>
+        let nev="Miki"
+        console.log("Szép napot "+nev+"!")
+        //röviden:
+        console.log(`Szép napot ${nev}! Hogy vagy?`)
+        console.log("nejfdskbvwkbvddvhabrwbvhidbvkjrahbkvbhdsbvkuwrbvhdjsbvkubvks")
+        
+        let [a,b,c,d]=[1,2,3,4]
+        console.log(a,b,c,d)
+        const s=100
+
+        console.log(nev[0], nev.length, nev[nev.length-1])
+
+        let pont=50
+        /*let tipus="A1"
+        if(pont>=40)
+        console.log("Sikeres vizsga")
+        //röviden:
+        pont>=40 && tipus=="A2" && console.log("Sikeres vizsga!")
+
+        let p="59"
+        p==pont && console.log("egyenlőek")*/
+
+        //if-else:
+        if(pont>=40)
+        console.log("Gratu")
+        else
+        console.log("Nem XD")
+
+        //röviden:
+        pont>=40 ? console.log("Gratuu"): console.log("Nem XDD")
+
+        let szamok=[1,4,99,23,2,6]
+        for(let i=0;i<szamok.length;i++){
+            console.log(`index: ${i}-érték: ${szamok[i]}`)
+        }
+        let szoveg=``
+        let ul=document.getElementById("lista")
+        szoveg+=`<li>${szamok[i]}</li>`
+        console.log(szoveg)
+
+    </Script>
+</body>
+</html>
