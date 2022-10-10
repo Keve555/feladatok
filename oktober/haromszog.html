@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="a">A:</label>
+        <input type="number" name="" id="a">
+        <label for="b">B: </label>
+        <input type="number" name="" id="b">
+        <label for="c">C:</label>
+        <input type="number" name="" id="c">
+
+        <input type="button" name="" id="" value="Vizsgál" onclick="vizsgal()">
+    </form>
+    <div class="eredmeny"></div>
+    <script>
+        function vizsgal() {
+            console.log("klikk");
+            let a=document.getElementById('a').value
+            let b=document.getElementById('b').value
+            let c=document.getElementById('c').value
+            console.log("klikk",a,b,c)
+            if(a+b>c && b+c>a && a+c>b) {
+                document.querySelector(".eredmeny").innerHTML ="szerkezhető"
+            }
+            else{
+                document.querySelector(".eredmeny").innerHTML =" nemszerkezhető"
+            }
+        }
+    </script>
+</body>
+</html>
