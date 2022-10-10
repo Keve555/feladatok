@@ -10,14 +10,12 @@
 <body>
   <style>
     h1{
-      text-align: center;
       padding-top: 50px;
       padding-bottom: 20px;
       color: white;
     }
     h3{
       color: white;
-      text-align: center;
     }
     img{
       width: 150px;
@@ -31,12 +29,17 @@
     }
     body{
       background-color: gray;
+      text-align: center;
+    }
+    hr{
+      background-color: white;
     }
     
   </style>
   <h1>A naprendszer bolygói</h1>
   <div class="container">
-    <div class="row">
+    <span>
+    <div class="row" onclick="show2(event)">
         <div class="col-md-3">
             <img src="merkur.jpg" alt="">
             <hr>
@@ -58,7 +61,7 @@
             <h3>Mars</h3>
         </div>
     </div>
-    <div class="row">
+    <div class="row" onclick="show2(event)">
         <div class="col-md-3">
             <img src="jupiter.jpg" alt="">
             <hr>
@@ -80,7 +83,23 @@
             <h3>Neptunusz</h3>
         </div>
     </div>
+  </span>
 </div>
-</body>
+<script>
+  /*function show(obj) {
+    console.log(obj.src)
+    window.open(obj.src, '_blank')
 
-</htm
+}*/
+function show2(e){
+  console.log(e.target)//mindig arra a DOM objektumra mutat ahol történik az esemény
+  //kérdezzük le az objektum nevét
+  console.log(e.target.tagName)
+  //ha képre kattintott:
+  if(e. target.tagName =='IMG'){
+    window.open(e. target.src, '_blank')
+  }
+}
+</script>
+</body>
+</html>
