@@ -7,11 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="mars.jpg" alt="">
-    <input type="button" name="" id="b1" value="kapcsoló" onclick="csere">
+    <img src="mars.jpg" alt="mars">
+    <input type="button" name="" id="b1" value="kapcsoló" onclick="csere()">
     <script>
         function csere(){
             document.querySelector("img").src="fold.jpg"
+            console.log(document.querySelector("img"))
+            let nev=document.querySelector("img").alt
+            console.log(nev)
+            if(nev=="mars"){
+                document.querySelector("img").src="fold.jpg"
+                document.querySelector("img").alt="fold"
+            }
+            else{
+                document.querySelector("img").src="mars.jpg"
+                document.querySelector("img").alt="mars"
+            }
         }
     </script>
 </body>

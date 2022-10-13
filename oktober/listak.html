@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #b1{
+            background-color: blue;
+            color: white;
+            border: 0px;
+            border-radius: 5%;
+        }
+        #b2{
+            background-color: aquamarine;
+            color: white;
+            border: 0px;
+            border-radius: 5%;
+        }
+        #b3{
+            background-color:green;
+            color: white;
+            border: 0px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="" id="b1" value="Számozatlan lista" onclick="sznl()">
+    <input type="button" name="" id="b2" value="Számozott lista" onclick="sztl()">
+    <input type="button" name="" id="b3" value="Választó lista" onclick="vl()">
+    <h3>Best frameworks 2022</h3>
+    
+    <script>
+        const frameworks=['NodeJS','ReactJS','jQuery','Express','Angular','VueJS','Django','Laravel']
+        function sznl(){
+            console.log(frameworks)
+            let elso=document.getElementById("b1").value
+            console.log(elso)
+            document.querySelector("Számmozatlan lista").innerHTML=""
+            document.querySelector("Számmozatlan lista").innerHTML=`Számmozatlan lista${frameworks}`
+        }
+        function sztl(){
+            console.log(frameworks)
+        }
+        function vl(){
+            console.log(frameworks)
+        }
+    </script>
+</body>
+</html>

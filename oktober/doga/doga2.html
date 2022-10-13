@@ -12,15 +12,18 @@
     <input type="text" name="" id="t1">
     <p>magassága: </p>
     <input type="text" name="" id="t2">
-    <input type="button" name="" id="b1" value="kiszámítás" onclick="szamol">
+    <input type="button" name="" id="b1" value="kiszámítás" onclick="szamol()">
     <div class="terulet">Téglalap területe: </div>
     <div class="kerulet">Téglalap kerülete: </div>
     <script>
-        function szamol(t1, t2){
+        function szamol(){
             //let k=t1*2+t2*2
             //let t=t1*t2
+            console.log("oké")
             let oldal1=+document.getElementById("t1").value
+            console.log(oldal1)
             let oldal2=+document.getElementById("t2").value
+            console.log(oldal2)
             
             document.querySelector(".kerulet").innerHTML=""
             document.querySelector(".terulet").innerHTML=""
