@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        input{
+            margin: 5px 5px 5px 5px;
+        }
+        .muvelet{
+            background-color: lightblue;;
+        }
+        .conatiner{
+            border: blue, solid, 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h4>Egyszerű számológép</h4>
+        </div>
+        <div class="row">
+            <input type="text" name="" id="sz1" size="15">
+        </div>
+        <div class="row">
+            <input type="text" name="" id="sz2" size="15">
+        </div>
+        <div class="row">
+            <input type="text" name="" id="ered" size="15" disabled>
+        </div>
+        <div class="row">
+            <input class="muvelet" type="button" name="" id="meg" value="+" onclick="osszead()">
+            <input class="muvelet" type="button" name="" id="bol" value="-" onclick="kivon()">
+            <input class="muvelet" type="button" name="" id="oszt" value="/" onclick="eloszt()">
+            <input class="muvelet" type="button" name="" id="szor" value="*" onclick="szoroz()">
+        </div>
+    </div>
+    <script>
+        function osszead(sz1, sz2){
+            let ered1=sz1+sz2
+            document.getElementById(ered1).innerHTML="ered";
+        }
+        function kivon(sz1, sz2){
+            let ered2=sz1-sz2
+            document.getElementById(ered2).innerHTML="ered";
+        }
+        function eloszt(sz1, sz2){
+            let ered3=sz1/sz2
+            document.getElementById(ered3).innerHTML="ered";
+        }
+        function szoroz(sz1, sz2){
+            let ered4=sz1*sz2
+            document.getElementById(ered4).innerHTML="ered";
+        }
+    </script>
+</body>
+</html>
