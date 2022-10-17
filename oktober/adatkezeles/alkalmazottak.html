@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td,th,tr{
+            border: 1px solid #000;
+            border-collapse: collapse;;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" name="" id="b1" value="Adatok" onclick="adatok()">
+    <table>
+        <thead>
+            <tr>
+                <th>Vezetéknév</th>
+                <td>Keresztnév</td>
+                <td>Nem</td>
+                <td>Fizetés</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script src="data.js"></script>
+    
+    <script>
+        //html tablazat
+        function adatok() {
+        let tbl=""
+        for(let obj of alkalmazottak){
+            tbl+=`
+    <tr>
+        <td>${obj.firstName}</td>
+        <td>${obj.lastName}</td>
+        <td>${obj.gender}</td>
+        <td>${obj.salary}</td>
+    </tr>
+    `
+        }
+        document.querySelector("tbody").innerHTML=tbl
+    }
+    </script>
+</body>
+</html>

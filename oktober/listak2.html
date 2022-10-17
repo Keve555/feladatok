@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>Listák</title>
     <style>
-        #b1{
+        #ul{
             background-color: blue;
             color: white;
             border: 0px;
             border-radius: 5%;
         }
-        #b2{
+        #ol{
             background-color: aquamarine;
             color: white;
             border: 0px;
             border-radius: 5%;
         }
-        #b3{
+        #select{
             background-color:green;
             color: white;
             border: 0px;
@@ -30,9 +30,9 @@
 <body>
     <div class="conatiner border">
         <div class="row justify-content-center m-2">
-            <input class="m-2" type="button" name="" id="b1" value="Számozatlan lista" onclick="sznl()">
-            <input class="m-2" type="button" name="" id="b2" value="Számozott lista" onclick="sztl()">
-            <input class="m-2" type="button" name="" id="b3" value="Választó lista" onclick="vl()">
+            <input class="m-2" type="button" name="" id="ul" value="Számozatlan lista" onclick="list()">
+            <input class="m-2" type="button" name="" id="ol" value="Számozott lista" onclick="list()">
+            <input class="m-2" type="button" name="" id="select" value="Választó lista" onclick="list()">
         </div>
         <div class="jutify-content-center tartalom">
 
@@ -41,39 +41,38 @@
     
     <script>
         const frameworks=['NodeJS','ReactJS','jQuery','Express','Angular','VueJS','Django','Laravel']
-        function sznl(){
-            //console.log("ul")
-            let ulStr="<ul>"
+        function list(obj){
+            console.log(obj.id)
+            let str=""
+            if(obj.id="ul"){
+                str="ul"
             for(let item of frameworks) {
                // console.log(item)
-                ulStr+=`<li>${item}</li>`
+                str+=`<li>${item}</li>`
+            
             }
-        ulStr+="</ul>"
-        console.log(ulStr)
-        document.querySelector(".tartalom").innerHTML=ulStr
         }
-        function sztl(){
-            //console.log("ol")
-            let ulStr="<ol>"
+        else if(obj.id=="ol"){
+            let str=""
+            if(obj.id="ol"){
+                str="ol"
             for(let item of frameworks) {
                // console.log(item)
-                ulStr+=`<li>${item}</li>`
+                str+=`<li>${item}</li>`
             }
-        ulStr+="</ol>"
-        console.log(ulStr)
-        document.querySelector(".tartalom").innerHTML=ulStr
         }
-        function vl(){
-            //console.log("select")
-            let ulStr="<select>"
+        }
+        else{
+            let str=""
+            if(obj.id="select"){
+                str="select"
             for(let item of frameworks) {
                // console.log(item)
-                ulStr+=`<option>${item}</option>`
+                str+=`<option>${item}</option>`
             }
-        ulStr+="</select>"
-        console.log(ulStr)
-        document.querySelector(".tartalom").innerHTML=ulStr
         }
+        }
+    }
     </script>
 </body>
 </html>
