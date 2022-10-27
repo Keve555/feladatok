@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Egyszerű számológép</title>
+</head>
+<style>
+    input{
+        margin-right: 10px;
+    }
+    select{
+        margin-right: 10px;
+    }
+    body{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h3>Egyszerű számológép</h3>
+        <div class="row">
+            <div class="col-sd-2">
+                <input type="number" name="" id="n1" placeholder="Add meg az egyik számot.">
+            </div>
+            <div class="col-sd-2">
+                <select name="" id="s1">
+                    <option value="osszead">+</option>
+                    <option value="kivon">-</option>
+                    <option value="szoroz">*</option>
+                    <option value="oszt">/</option>
+                </select>
+            </div>
+            <div class="col-sd-2">
+                <input type="number" name="" id="n2" placeholder="Add meg a másik számot.">
+            </div>
+            <div class="col-sd-2">
+                <input type="button" name="" id="b1" value="=" onclick="szamol()">
+            </div>
+            <div class="col-sd-2">
+                <input type="number" name="" id="n3" disabled>
+            </div>
+            <div class="col-sd-2"></div>
+        </div>
+    </div>
+    <script>
+        function szamol(){
+            console.log("teszt")
+            let sz1=+document.getElementById("n1").value
+            console.log(sz1)
+            let sz2=+document.getElementById("n2").value
+            console.log(sz2)
+            let sz3=+document.getElementById("n3").value
+            console.log(sz3)
+            if(option.value="osszead")
+            sz1+sz2==sz3
+            else if(option.value="kivon")
+            sz1-sz2==sz3
+            else if(option.value="szoroz")
+            sz1*sz2==sz3
+            else
+            sz1/sz2==sz3
+        }
+    </script>
+</body>
+</html>
