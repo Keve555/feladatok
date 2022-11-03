@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Car Brands</title>
+    <style>
+        img{
+            width: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Brand</th>
+                <th>Headquarter</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <img src="audi.jpg" alt="">
+    <img src="bmw.jpg" alt="">
+    <img src="mercedes.jpg" alt="">
+    <img src="vw.jpg" alt="">
+    <img src="opel.jpg" alt="">
+   </div> 
+   <script src="GCars.js"></script>
+   <script>
+    let strgcars=""
+    for(let obj of GCars){
+        strgcars+=`
+            <tr>
+                <td>${obj.id}</td>
+                <td>${obj.brand}</</td>
+                <td>${obj.hq}</</td>
+            </tr>
+        `
+    }
+    console.log(strgcars)
+    document.querySelector("tbody").innerHTML=strgcars
+   </script>
+</body>
+</html>
