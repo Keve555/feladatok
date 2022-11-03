@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Kód</th>
+                    <th>Név</th>
+                    <th>Székhely</th>
+                </tr>
+            </thead>
+            <tbody class="tb1">
+
+            </tbody>
+        </table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Szerző</th>
+                    <th>Cím</th>
+                    <th>Év</th>
+                    <th>Kiadókód</th>
+                    <th>Oldal</th>
+                    <th>Téma</th>
+                </tr>
+            </thead>
+            <tbody class="tb2">
+            </tbody>
+        </table>
+        <select name="" id="">
+        </select>
+
+    </div>
+    <script src="konyvek1.js"></script>
+    <script src="konyvek2.js"></script>
+    <script>
+        let strtab1=""
+        let strOpt=""
+        for(let obj of konyvek1){
+            strtab1+=`
+            <tr>
+                <td>${obj.kod}</td>
+                <td>${obj.nev}</td>
+                <td>${obj.szekhely}</td>
+            </tr>
+            `
+
+            strOpt+=`
+            <option value="${obj.kod}">${obj.nev}</option>
+            `
+        }
+        console.log(strtab1)
+        document.querySelector(".tb1").innerHTML=strtab1
+
+        document.querySelector("select").innerHTML=strOpt
+    </script>
+    <script>
+        let strtab2=""
+        for(let obj of konyvek2){
+            strtab2+=`
+            <tr>
+                <td>${obj.id}</td>
+                <td>${obj.szerzo}</td>
+                <td>${obj.cim}</td>
+                <td>${obj.ev}</td>
+                <td>${obj.kiadokod}</td>
+                <td>${obj.oldal}</td>
+                <td>${obj.tema}</td>
+            </tr>
+            `
+        }
+        console.log(strtab2)
+        document.querySelector(".tb2").innerHTML=strtab2
+    </script>
+</body>
+</html>
